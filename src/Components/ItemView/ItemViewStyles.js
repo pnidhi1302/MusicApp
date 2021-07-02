@@ -5,7 +5,7 @@ export const itemViewStyles = StyleSheet.create({
     paddingTop: 10,
     paddingBottom: 10,
     borderBottomWidth: 0.5,
-    borderColor: 'gray',
+    borderColor: '#f4511e',
     marginLeft: 15,
     marginRight: 15,
     display: 'flex',

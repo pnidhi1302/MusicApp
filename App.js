@@ -1,7 +1,19 @@
 import React from 'react';
-import {HomeScreen} from './src/Components/Home';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
+import { HomeScreen, DetailScreen } from './src';
+
+const headerStyles = {
+    title: 'Music App',
+    headerStyle: {
+      backgroundColor: '#f4511e',
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+      alignSelf: 'center',
+    },
+}
 
 const App = () => {
   const Stack = createStackNavigator();
@@ -12,17 +24,12 @@ const App = () => {
         <Stack.Screen
           name="Home"
           component={HomeScreen}
-          options={{
-            title: 'Music App',
-            headerStyle: {
-              backgroundColor: '#f4511e',
-            },
-            headerTintColor: '#fff',
-            headerTitleStyle: {
-              fontWeight: 'bold',
-              alignSelf: 'center',
-            },
-          }}
+          options={headerStyles}
+        />
+        <Stack.Screen
+          name="Details"
+          component={DetailScreen}
+          options={headerStyles}
         />
       </Stack.Navigator>
     </NavigationContainer>

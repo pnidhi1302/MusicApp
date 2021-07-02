@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { View, FlatList } from 'react-native';
 import { ItemView } from '../ItemView';
 
-export default HomeScreen = () => {
+export default HomeScreen = (props) => {
   
   const [data, setData] = useState(null);
 
@@ -23,7 +23,7 @@ export default HomeScreen = () => {
     <View>
       <FlatList
         data={data}
-        renderItem={({item, index}) => ItemView(item, index)}
+        renderItem={({item, index}) => ItemView(item, index, props)}
       />
     </View>
   );
